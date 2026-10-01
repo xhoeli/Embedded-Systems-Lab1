@@ -98,7 +98,7 @@ void every10ms() {
       if (count == 0) {
         setRedLED(OFF) ;     // set the LEDs for the new state
         state = GREENOFF ;
-        count = OFFPERIOD ;
+
       }
       break ;
 
@@ -113,10 +113,28 @@ void every10ms() {
     case GREENON:
       if (count == 0) {
         setGreenLED(OFF) ;   // set the LEDs for the new state
+        state = BLUEOFF ;
+
+      }
+      break ;
+
+		case BLUEOFF:
+      if (count == 0) {
+        setBlueLED(ON) ;    // set the LEDs for the new state
+        state = BLUEON ;
+        count = ONPERIOD ;
+      }
+      break ;
+
+    case BLUEON:
+      if (count == 0) {
+        setBlueLED(OFF) ;   // set the LEDs for the new state
         state = REDOFF ;
         count = OFFPERIOD ;
       }
       break ;
+			
+			
   }
 }
 
