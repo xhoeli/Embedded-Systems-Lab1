@@ -15,8 +15,9 @@
 // Symbols for constants
 #define OFF 0
 #define ON 1
-#define ONPERIOD 100 // time in 10ms units
-#define OFFPERIOD 100 // time in 10ms units
+#define ONPERIOD 200 // time in 10ms units
+#define OFFPERIOD 400 // time in 10ms units
+
 
 // States
 #define REDOFF 0
